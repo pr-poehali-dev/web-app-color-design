@@ -14,16 +14,16 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-6 py-6">
+        <div className="flex items-start justify-between">
           <div 
-            className="text-2xl font-bold text-primary cursor-pointer hover:text-secondary transition-colors"
+            className="text-3xl font-bold text-primary cursor-pointer hover:text-secondary transition-colors pt-1"
             onClick={() => onNavigate('home')}
           >
             iZiBot
           </div>
 
-          <nav className="flex gap-8">
+          <nav className="flex gap-8 items-center h-full">
             {navItems.map((item) => (
               <button
                 key={item.id}
